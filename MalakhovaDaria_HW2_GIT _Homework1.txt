@@ -20,57 +20,36 @@ JSON
  10.Отредактировать содержание файла “new.json” - написать информацию о себе
  (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
   cat new.json
-{"name": "Malakhova Daria Valerevna"
- "age": 27
- "pets": 4
- "future Desired Salary" : 80000"rub"}
+{
+    "name": "Daria",
+    "age": 27,
+    "pets": 4,
+    "salary": 80000
+}
+ Сохранить -> Ctrl+c
 
 
  11.Отправить изменения на внешний репозиторий - 
- git add .
- git commit -m "add 1 file again"
+ git commit -am "add 1 file again"
  git push
 
  12. Создать файл preferences.json
  13. В файл preferences.json добавить информацию о своих предпочтениях 
 (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
  cat > preferences.json
-{"Favorite movie" : 1+1,
- "Favorite TV series" : "Desperate housewives",
- "Favorite dishes" : "cake",
- "Favorite time in year": "all seasons",
- "Wish country" : "Canada"}
+{
+ "Favorite movie": "1+1",
+ "Favorite TV series": "desperate housewives",
+ "Favorite dishes": "cake"
+}
+Сохранить -> Ctrl+c
 
  14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
  cat skills.json
 {
-"1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC."
-"2. Что такое клиент-серверная архитектура."
-"3. HTTP Методы запросов на сервер."
-"4. Коды ответов HTTP сервера."
-"5. Структуры HTTP запросов и ответов."
-"6. Что такое JSON, XML. Их структура."
-"7. Тестирование API через Postman (JS, автотесты API)."
-"8. Снятие и чтение логов c внешнего сервера."
-"9. Снифинг http web трафика через Charles и Fiddler."
-"10. Dev Tools веб браузеров (Google Chrome, FireFox)."
-"11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)"
-"12. Мобильное тестирование."
-"13. Особенность iOS, Android, гайдлайны."
-"14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)"
-"15. Сборка Android приложений на Android Studio."
-"16. ADB (управление андройд девайсами)."
-"17. Настройка прокси и vpn на iOS и Android."
-"18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android."
-"19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)"
-"20. Основы bash скриптинг, автоматизация рутинных задач на сервере."
-"21. Доступ к удалённым серверам."
-"22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join)."
-"23. База данных Postgres (установка, настройка и использование)."
-"24. Нереляционная база данных Redis (установка, настройка и использование)."
-"25. Нагрузочное тестирование в Jmeter."
-"26. Методология разработки Scrum."
+  "skills": ["Json", "XML", "API", "Postman", "Dev Tools", "VPN", "Mobile testing", "Python"]
 }
+Сохранить -> Ctrl+c
 
  15. Отправить сразу 2 файла на внешний репозиторий - 
  git add .
@@ -83,11 +62,17 @@ JSON
  17. Сделать Commit changes (сохранить) изменения на веб интерфейсе - click -> "edit this file"
 
  18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON. 
-{"type" : "bug",
- "priority" : "hight",
+{
+ "type" : "bug_report",
+ "id" : 5264,
+ "приоритет" : "незначительный",
  "sprint" : "A1",
- "summary" : "the send button on Feedback panel doesn't work corrently",
- "description" : "when clicking on the button, an incorrect recuest is sent to the server" }
+ "сводка" : "фон не меняется. нажмите на кнопку купить. на странице корзины. при наведениикурсора мыши",
+ "description" : "при нажатии на кнопку на сервер отправляется неверный recuest",
+ "spep_to_reproduce" : "открыть страницу https://www.wildberries.ru/lk/basket. наведите курсор на покупку",
+ "результат" : "фон кнопки не меняется",
+ "expected_result" : "фон кнопки меняется на #004783"
+}
 
  19. Сделать Commit changes (сохранить) изменения на веб интерфейсе - click -> "Commit changes  Cancel" 
 
@@ -112,13 +97,15 @@ XML
  в формате XML -
  vim new.xml
  
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <about>
-        <name>Malakhova Daria Valerevna</name>
-        <age>27</age>
-        <pets>4</pets>
-        <salary>80000</salary>
+ <name>Daria</name>
+ <age>27</age>
+ <pets>4</pets>
+ <salary>80000</salary>
 </about>
+Сохранить: Esc -> :wq -> enter
+
 
  28. Отправить изменения на внешний репозиторий - 
  git add .
@@ -131,14 +118,15 @@ XML
 (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML
  vim preferences.xml
  
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <preferences>
-    <favorite_movie>1+1</favorite_movie>
-    <favorite_TV_series>Desperate housewives</favorite_TV_series>
-    <favorite_dishes>cake</favorite_dishes>
-    <favorite_time_in_year>all seasons</favorite_time_in_year>
-    <country>Canada</country>
+ <favorite_movie>1+1</favorite_movie>
+ <favorite_TV_series>Desperate housewives</favorite_TV_series>
+ <favorite_dishes>cake</favorite_dishes>
+ <favorite_time_in_year>all seasons</favorite_time_in_year>
+ <country>Canada</country>
 </preferences>
+Сохранить: Esc -> :wq -> enter
  
  31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
  touch sklls.xml
@@ -146,13 +134,15 @@ XML
 
  <?xml version="1.0" encoding="UTF-8"?>
 <skills>
-        <a>Theory</a>
-        <b>SQL</b>
-        <c>HTTP</c>
-        <d>Scrum</d>
-        <e>Jmeter</e>
-        <f>etc</f>
+	<a>Theory</a>
+	<b>SQL</b>
+	<c>HTTP</c>
+	<d>Scrum</d>
+	<e>Jmeter</e>
+	<f>etc</f>
 </skills>
+Сохранить: Esc -> :wq -> enter
+
  
  32. Сделать коммит в одну строку -  git add . && git commit -m "add skills"
  
@@ -165,11 +155,14 @@ XML
  36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML
  <?xml version="1.0" encoding="UTF-8"?>
 <bug_report>
+  <id>5264</id>
   <type>bug</type>
-  <priority>hidht</priority>
+  <priority>minor</priority>
   <sprint>A1</sprint>
-  <summar>the send button on Feedback panel doesn't work corrently</summary>
-  <description>when clicking on the button, an incorrect recuest is sent to the server</description> 
+  <summary>the background does not change. on the " to buy" button. on the "shopping cart" page. on hover</summary>
+  <spep_to_reproduce>open the page https://www.wildberries.ru/lk/basket. hover the cursor over "to buy"</spep_to_reproduce>
+  <result>the background of the button does not change</result>
+  <expected_result>background of the button changes on #004783</expected_result>
 </bug_report>
 
  37. Сделать Commit changes (сохранить) изменения на веб интерфейсе - click -> "Commit changes  Cancel" 
@@ -200,6 +193,7 @@ TXT
  age: 27
  pets: 4
  salary: 80000
+ Сохранить -> Ctrl+c
 
  8. Отправить изменения на внешний репозиторий - git add . && git commit -m "add new.txt 1" && git push
 
@@ -212,6 +206,7 @@ TXT
  Favorite dishes: cake
  Favorite time in year: all seasons
  Coutry: Canada
+ Сохранить -> Ctrl+c
 
  11. Создать файл skills.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
  cat > skills.txt
@@ -242,6 +237,7 @@ TXT
 25. Load testing in Jmeter.
 26. Scrum development methodology.
 27. Python. (Learning the basics. Creating a client server application)
+Сохранить -> Ctrl+c
 
  12. Сделать коммит в одну строку - git add . && git commit -m "add new files"
 
@@ -252,11 +248,14 @@ TXT
  15. Сделать Commit changes (сохранить) изменения на веб интерфейсе - click -> "edit this file"
 
  16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT
- type: bug
- priority: hight
- sprint: A1
- summary: the send button on Feedback panel doesn't work corrently
- description: when clicking on the button, an incorrect recuest is sent to the server
+type: bug 
+id: 5264
+priority: minor
+sprint: A1
+summary: the background does not change. on the " to buy" button. on the "shopping cart" page. on hover
+spep to reproduce: open the page https://www.wildberries.ru/lk/basket. hover the cursor over "to buy"
+result: the background of the button does not change
+expected result: background of the button changes on #004783
 
  17. Сделать Commit changes (сохранить) изменения на веб интерфейсе - click -> "Commit changes  Cancel" 
 

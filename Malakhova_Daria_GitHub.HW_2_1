@@ -1,0 +1,126 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+  1.1 Создать на Githab репозитроий GitHub.HW_2_1
+  1.2 Клонировть созданный репозиторий на лакольный репозиторий 
+      git clone https://github.com/MalakhovaDaria/GitHub.HW_2_1.git
+  1.3 Зайти в репозиторий
+      cd GitHub.HW_2_1
+  1.4 Создать ветки Postman, Jmeter, CheckLists, Bag_reports, SQL, Charles, Mobile_Testing:
+      git branch Postman
+      git branch Jmeter
+      git branch CheckLists
+      git branch Bag_reports
+      git branch SQL
+      git branch Charles
+      git branch Mobile_testing
+2. Запушить все ветки на внешний репозиторий.
+      git push --all
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+      git checkout Bag_Reports
+      touch bag_report_structure.txt
+      vim bag_report_structure.txt
+           insert
+              type 
+              id
+              summary
+              step to reproduce
+              result
+              expected result
+              sprint
+              priority
+
+           Esq -> :wq -> enter
+       
+4. Запушить структуру багрепорта на внешний репозиторий
+      git add .
+      git commit -m "create and modificate bag_report_structure.txt"
+      git push --set-upstream origin Bag_reports
+      
+5. Вмержить ветку Bag_reports в Main
+      git checkout main
+      git merge Bag_reports
+      
+6. Запушить main на внешний репозиторий.      
+      git add .
+      git commit -m "merge branch Bag_reports in branch main"
+      git push
+      
+7. В ветке CheckLists набросать структуру чек листа.
+      git checkout CheckLists
+      touch checklist.txt
+      vim checklist.txt
+        insert
+                Testing Checklist:
+
+Create System and Acceptance Tests 
+Start Acceptance Test Creation 
+Identify Test team 
+Create Workplan 
+Create Test Approach 
+Link Acceptance Criteria and Requirements to form the basis of Acceptance Test 
+Use a subset of system test cases to form requirements portion of Acceptance Test 
+Create scripts for use by the customer to demonstrate that the system meets requirements 
+Create a Test schedule. Include people and all other resources. 
+Conduct Acceptance Test 
+Start System Test Creation 
+Identify test team members 
+Create Workplan 
+Determine Resource Requirements 
+Identify productivity tools for testing
+Determine Data Requirements 
+Reach an agreement with Data Center 
+Create Test Approach 
+Identify any facilities that are needed 
+Obtain and review existing test material 
+Create an inventory of test items 
+Identify Design states, conditions, processes, and procedures 
+Determine the need for Code-based (white box) testing. Identify conditions. 
+Identify all functional requirements 
+End inventory creation 
+Start Test Case creation 
+Create Test Cases based on the inventory of test items 
+Identify logical groups of business function for the new system 
+Divide test cases into functional groups traced to test item inventory 
+Design data sets to correspond to test cases 
+End Test Case creation 
+Review business functions, test cases, and data sets with users  
+Get signoff on test design from Project leader and QA 
+End Test Design 
+Begin Test Preparation 
+Obtain Test Support resources 
+Outline expected results for each test case 
+Obtain Test Data. Validate and trace to test cases 
+Prepare detailed Test Scripts for each test case 
+Prepare & Document environmental setup procedures. Include back up and recovery plans 
+End Test Preparation phase 
+Conduct System Test 
+Execute Test Scripts 
+Compare the actual result to expected 
+Document discrepancies and create problem report  
+Prepare maintenance phase input
+Re-execute test group after problem repairs 
+Create a final test report, include known bugs list 
+Obtain formal signoff
+
+    Esq -> :wq -> enter
+    
+8. Запушить структуру на внешний репозиторий: 
+    git add.
+    git commit -m "create and modificate checklist.txt"
+    git push --set-upstream origin Checklists
+    
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main:
+    Зайти в Github, репозиторий GitHub.HW_2_1 ->ветка CheckLists -> нажать зеленую кнопку Compare&pull requset
+    
+10. Синхронизировать Внешнюю и Локальную ветки Main
+    git checkout main
+    git fetch
+    git pull

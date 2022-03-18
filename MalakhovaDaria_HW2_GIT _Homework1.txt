@@ -65,12 +65,12 @@ JSON
 {
  "type" : "bug_report",
  "id" : 5264,
- "приоритет" : "незначительный",
+ "priority" : "незначительный",
  "sprint" : "A1",
  "сводка" : "фон не меняется. нажмите на кнопку купить. на странице корзины. при наведениикурсора мыши",
  "description" : "при нажатии на кнопку на сервер отправляется неверный recuest",
- "spep_to_reproduce" : "открыть страницу https://www.wildberries.ru/lk/basket. наведите курсор на покупку",
- "результат" : "фон кнопки не меняется",
+ "step_to_reproduce" : "открыть страницу https://www.wildberries.ru/lk/basket. наведите курсор на покупку",
+ "result" : "фон кнопки не меняется",
  "expected_result" : "фон кнопки меняется на #004783"
 }
 
@@ -109,7 +109,7 @@ XML
 
  28. Отправить изменения на внешний репозиторий - 
  git add .
- git commit -m "add new.xml"
+ git commit -am "add new.xml"
  git push
 
  29. Создать файл preferences.xml - touch preferences.xml
@@ -160,7 +160,7 @@ XML
   <priority>minor</priority>
   <sprint>A1</sprint>
   <summary>the background does not change. on the " to buy" button. on the "shopping cart" page. on hover</summary>
-  <spep_to_reproduce>open the page https://www.wildberries.ru/lk/basket. hover the cursor over "to buy"</spep_to_reproduce>
+  <step_to_reproduce>open the page https://www.wildberries.ru/lk/basket. hover the cursor over "to buy"</spep_to_reproduce>
   <result>the background of the button does not change</result>
   <expected_result>background of the button changes on #004783</expected_result>
 </bug_report>
@@ -253,7 +253,7 @@ id: 5264
 priority: minor
 sprint: A1
 summary: the background does not change. on the " to buy" button. on the "shopping cart" page. on hover
-spep to reproduce: open the page https://www.wildberries.ru/lk/basket. hover the cursor over "to buy"
+step to reproduce: open the page https://www.wildberries.ru/lk/basket. hover the cursor over "to buy"
 result: the background of the button does not change
 expected result: background of the button changes on #004783
 

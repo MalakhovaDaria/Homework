@@ -1,0 +1,187 @@
+Создать запросы в Postman
+
+Postman -> new -> Collection -> create new collection "Group_27" -> add Request
+
+Protocol: http
+IP: 162.55.220.72
+Port: 5005
+
+1. EP_1
+
+Method: GET
+EndPoint: /get_method
+request url params: 
+ name: str
+ age: int
+ 
+http://162.55.220.72:5005/get_method?name=Daria&age=27
+
+[
+    "Daria",
+    "27"
+]
+
+2. EP_2
+
+Method: POST
+EndPoint: /user_info_3
+request form data: 
+ name: str
+ age: int
+ salary: int
+
+http://162.55.220.72:5005/user_info_3
+
+{
+    "age": "27",
+    "family": {
+        "children": [
+            [
+                "Alex",
+                24
+            ],
+            [
+                "Kate",
+                12
+            ]
+        ],
+        "u_salary_1_5_year": 320000
+    },
+    "name": "Daria",
+    "salary": 80000
+}
+
+3. EP_3
+
+Method: GET
+EndPoint: /object_info_1
+request url params: 
+ name: str
+ age: int
+ weight: int
+ 
+ http://162.55.220.72:5005/object_info_1?name=Daria&age=27&weight=57
+ 
+ {
+    "age": 27,
+    "daily_food": 0.684,
+    "daily_sleep": 142.5,
+    "name": "Daria"
+}
+
+4. EP_4
+
+Method: GET
+EndPoint: /object_info_2
+request url params: 
+ name: str
+ age: int
+ salary: int
+ 
+ http://162.55.220.72:5005/object_info_2?name=Daria&age=27&salary=80000
+ 
+ {
+    "person": {
+        "u_age": 27,
+        "u_name": [
+            "Daria",
+            80000,
+            27
+        ],
+        "u_salary_5_years": 336000.0
+    },
+    "qa_salary_after_1.5_year": 264000.0,
+    "qa_salary_after_12_months": 216000.0,
+    "qa_salary_after_3.5_years": 304000.0,
+    "qa_salary_after_6_months": 160000,
+    "start_qa_salary": 80000
+}
+
+5. EP_5
+
+Method: GET
+EndPoint: /object_info_3
+request url params: 
+ name: str
+ age: int
+ salary: int
+ 
+ http://162.55.220.72:5005/object_info_3?name=Daria&age=27&salary=8000
+ 
+ {
+    "age": "27",
+    "family": {
+        "children": [
+            [
+                "Alex",
+                24
+            ],
+            [
+                "Kate",
+                12
+            ]
+        ],
+        "pets": {
+            "cat": {
+                "age": 3,
+                "name": "Sunny"
+            },
+            "dog": {
+                "age": 4,
+                "name": "Luky"
+            }
+        },
+        "u_salary_1_5_year": 32000
+    },
+    "name": "Daria",
+    "salary": 8000
+}
+
+6. EP_6
+
+Method: GET
+EndPoint: /object_info_4
+request url params: 
+ name: str
+ age: int
+ salary: int
+ 
+ http://162.55.220.72:5005/object_info_4?name=Daria&age=27&salary=80000
+ 
+ {
+    "age": 27,
+    "name": "Daria",
+    "salary": [
+        80000,
+        "160000",
+        "240000"
+    ]
+}
+
+7. EP_7
+
+Method: POST
+EndPoint: /user_info_2
+request form data: 
+ name: str
+ age: int
+ salary: int
+ 
+ http://162.55.220.72:5005/user_info_2
+ 
+ {
+    "person": {
+        "u_age": 27,
+        "u_name": [
+            "Daria",
+            80000,
+            27
+        ],
+        "u_salary_5_years": 336000.0
+    },
+    "qa_salary_after_1.5_year": 264000.0,
+    "qa_salary_after_12_months": 216000.0,
+    "qa_salary_after_3.5_years": 304000.0,
+    "qa_salary_after_6_months": 160000,
+    "start_qa_salary": 80000
+}
